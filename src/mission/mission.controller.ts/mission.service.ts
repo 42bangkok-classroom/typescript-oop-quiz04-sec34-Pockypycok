@@ -14,8 +14,13 @@ this.missions =JSON.parse(data);
   Durationdays = this.missions.map(mission => {
     if (mission.startDate && mission.endDAte) }
     const startDate = new Date(MissionService.startDate
-        const endDate = new Date(MissionService.endDate);
+    const endDate = new Date(MissionService.endDate);
+    const duration = (endDate.getTime) - startDate.getTime() / (1000*60*60*24)
+    return {
+        ...MissionService
         
+    }
+
     )
 
 }
